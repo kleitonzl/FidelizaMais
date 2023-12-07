@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FidelizaMais - Cadastro</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Sua Empresa</h1>
+    </header>
+
+    <nav>
+        <a href="./index.html">Home</a>
+ 
+    </nav>
+    <div id="content">
+        <h2>Cadastre sua Empresa</h2>
+        <form id="registrationForm" onsubmit="return validateForm()">
+            <label for="companyName">Nome da Empresa:</label>
+            <input type="text" id="companyName" name="companyName" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Telefone:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="website">Link do Site da Empresa:</label>
+            <input type="url" id="website" name="website" required>
+
+            <label for="password">Senha (mínimo 8 caracteres):</label>
+            <input type="password" id="password" name="password" minlength="8" required>
+
+            <button type="submit">Cadastrar</button>
+        </form>
+    </div>
+
+    <script>
+        function validateForm() {
+            
+            var password = document.getElementById("password").value;
+
+            if (password.length < 8) {
+                alert("A senha deve ter pelo menos 8 caracteres.");
+                return false;
+            }
+
+           
+            return true;
+        }
+    </script>
+</body>
+</html>

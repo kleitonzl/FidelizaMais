@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FidelizaMais - Login</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <h1>FidelizaMais</h1>
+    </header>
+
+    <nav>
+        <a href="./home.html">Home</a>
+       
+    </nav>
+    <div id="content">
+        <h2>Login</h2>
+        <form id="loginForm" onsubmit="return validateLoginForm()">
+            <label for="companyName">Nome da Empresa:</label>
+            <input type="text" id="companyName" name="companyName" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Senha:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Entrar</button>
+        </form>
+    </div>
+
+    <script>
+        function validateLoginForm() {
+            
+            var password = document.getElementById("password").value;
+
+            if (password.length === 0) {
+                alert("Por favor, insira a senha.");
+                return false;
+            }
+
+            
+            return true;
+        }
+    </script>
+</body>
+</html>
